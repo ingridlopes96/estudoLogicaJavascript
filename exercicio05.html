@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width-device-width, inicial-scale=1.0">
-    <title>EXERCíCIO 03</title>
+    <title>EXERCICIO 05</title>
     <style>
         body{
             background-color: cornflowerblue;
@@ -54,28 +54,24 @@
 </head>
 <body>
     <div class="box-nav">
-        <h1>EXERCíCIO #03</h1>
+        <h1>EXERCíCIO #05</h1>
         <h2>Prof. Gustavo Neitzke</h2>
     </div>
     <div class="box">
-        <p>Leia a idade de duas crianças. Após, mostrar a soma das idades e a média</p>
-        <input type="number" id="num1" placeholder="Digite um valor"></input>
+        <p>Leia uma temperatura em graus Celsius. Após, calcular e mostrar a mesma temperatura em Fahrenheit </p>
+        <input type="number" id="celcius" placeholder="Digite os graus Celcius"></input>
         <br><br>
-        <input type="number" id="num2" placeholder="Digite um valor"></input>
-        <br><br>
-        <button onclick="somaMediaIdade()">Enviar</button>
+        <button onclick="transferTemp()">Enviar</button>
     </div>
 </body>
 <script>
-    function somaMediaIdade()
+    function transferTemp()
     {
-        var a = parseInt(document.querySelector('#num1').value);
-        var b = parseInt(document.querySelector('#num2').value);
-        var c = a + b;
-        var d = c/2;
+        var celcius =  parseInt(document.querySelector('#celcius').value);
+        var fah = (celcius*1.8)+32;
+        //console.log(fah);
+        alert('A temperatura em Fahrenheit é: '+fah);
 
-        console.log('A soma das idades é: ' + c);
-        console.log('A média é: ' + d);
     }
 </script>
 </html>
